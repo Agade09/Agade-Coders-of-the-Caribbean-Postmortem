@@ -89,7 +89,7 @@ The enemy's shots are not reassigned, he fires according to the heuristic in my 
 * Suicide to regroup the rum in one boat didn't seem like it would be the meta game. It's not obvious that 1 boat with 40 rum is better than 2 boats with 20 rum. I might well sink you with my two boats.
 * I didn't come up with anything clever when it comes to barrels, I didn't try to be the last one to pick up a barrel or anything like that which I saw other AIs do. Maybe I missed something here.
 
-# Conclusion
+## Conclusion
 
 I tried to focus on the most simple/effective ideas as I think the lines of code show. I have big doubts about my search algorithm though. I wonder if I missed something ovious in that regard or if the only way to go is minimax.
 
