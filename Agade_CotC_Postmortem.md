@@ -8,7 +8,7 @@ One of the first things I did was write my own [referee program](https://github.
 
 This contest had a bit of a rock/paper/scissor element to it so I did have a few issues with versions looking good in self play but not working as well against real opponents.
 
-Furthermore, I learned from GitC that the win rate you get in self play is often exaggerated because in the extreme case you'll play a bot against itself, minus a mistake, and win all the time. So a lesson I learned from GitC was to try and focus on big features first and not waste too much time on supposedly 1% coefficient changes that are actually worth 0.1 in the arena.
+Furthermore, I learned from GitC that the win rate you get in self play is often exaggerated because in the extreme case you'll play a bot against itself, minus a mistake, and win all the time. So a lesson I learned from GitC was to try and focus on big features first and not waste too much time on supposedly 1% coefficient changes that are actually worth 0.1% in the arena.
 
 ## Search algorithm
 
@@ -39,12 +39,12 @@ I'm not convinced my search algorithm was so great, it feels hacky to me but it 
 
 The evaluation of a boat's position is:
 
-* Rum
-* {-1,1,0.5}[speed]
-* -0.02*pow(DistToCenter,2)-0.1*AngleDistToCenter
-* -0.5*DistToNearestBarrel-0.1*AngleToNearestBarrel if there is a barrel
-* -0.5*DistToEnemyCapitalShip-0.1*AngleToEnemyCapitalShip if there is no barrel and the enemy capital ship has more rum than mine
-* -10 points if the boat is touching the middle or the back of an enemy ship (blocked)
+* `Rum`
+* `{-1,1,0.5}[speed]`
+* `-0.02*pow(DistToCenter,2)-0.1*AngleDistToCenter`
+* `-0.5*DistToNearestBarrel-0.1*AngleToNearestBarrel` if there is a barrel
+* `-0.5*DistToEnemyCapitalShip-0.1*AngleToEnemyCapitalShip` if there is no barrel and the enemy capital ship has more rum than mine
+* `-10` points if the boat is touching the middle or the back of an enemy ship (blocked)
 
 I value speed 1 more than 2 because although speed 2 might seem better at dodging it is actually less maneuverable: you are more likely to crash into mines, other boats and the edges of the map and you have one less available move (FASTER) to make use of.
 
