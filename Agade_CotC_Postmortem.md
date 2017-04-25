@@ -1,6 +1,6 @@
 ﻿# Agade Coders of the Carribbean Postmortem
 
-I will try to describe my AI which finished second in the CotC contest. My code was 720 lines of C++.
+I will try to describe my AI which finished second in the CotC contest.
 
 ## Local Arena
 
@@ -91,7 +91,7 @@ The enemy's shots are not reassigned, he fires according to the heuristic in my 
 
 ## Conclusion
 
-I tried to focus on the most simple/effective ideas as I think the lines of code show. I have big doubts about my search algorithm though. I wonder if I missed something ovious in that regard or if the only way to go is minimax.
+I tried to focus on the most simple/effective ideas as I think the 720 lines of code show. I have big doubts about my search algorithm though. I wonder if I missed something ovious in that regard or if the only way to go is minimax.
 
 I'm disappointed to have finished second after being first during so much of the competition, waking up to a bot I never really had a chance to try to beat. But that's how contests are, you stop at some arbitrary time and whoever is first then wins. ReCurse somehow managed to piece together a minimax for this game which is really cool. I didn't think it could be done until I saw it. I guess he had the vision.
 
