@@ -31,7 +31,7 @@ while(TimeLeft){
 So when I bruteforce the first enemy ship's move at a depth of 1 I assume everyone else waits, then when I bruteforce the enemy's second ship assuming his first ship makes that move and everyone else waits etc...
 Then at depth 2 when I bruteforce the first enemy ship's moves I assume every other ship makes the move that was found at depth 1 and then waits during its second turn, etc...
 
-The results of a partially searched depth, because I ran out of time, are discarded. I reached depths of 4 to 6. The win rate was very similar at a fixed depth of 4 and takes little time. This is why some people thought I was running heuristics due to answering in a few milliseconds at the beginning of the competition.
+The results of a partially searched depth, because I ran out of time, are discarded. I reached depths of 4 to 6. The win rate was very similar by iterating up to depth 4 and takes little time. This is why some people thought I was running heuristics due to answering in a few milliseconds at the beginning of the competition.
 
 I'm not convinced my search algorithm was so great, it feels hacky to me but it was simple. I suspect for example that when enemy boats are close to mine the algorithm must oscillate between solutions as the depth increases.
 
