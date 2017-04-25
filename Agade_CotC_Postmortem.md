@@ -64,7 +64,7 @@ If the shot can be made (dist<=10) and the ship can shoot (cooldown==0) then add
 
 Keep in mind that it takes `2+round(distance/3.0)` turns to hit a target because the travel time is `1+round(distance/3.0)` and it takes one turn to spawn the cannonball.
 
-If there is an enemy behind the boat which would touch the mine spot after max(1,speed*2) moves forward, then FIRE becomes MINE and scores 10 points. So for example if a boat is moving at speed 1 towards my mine spot and is distance 2 away from it, place a mine because next turn he will be right in front of the mine and he'll have to SLOWER, then turn, then FASTER to avoid it, and if he's distance 1 away, even better because he will blow up on the mine unless he anticipates and plays SLOWER, which is still good because then he has to turn and accelerate around the mine.
+If there is an enemy behind the boat which would touch the mine spot after `max(1,speed*2)` moves forward, then FIRE becomes MINE and scores 10 points. So for example if a boat is moving at speed 1 towards my mine spot and is distance 2 away from it, place a mine because next turn he will be right in front of the mine and he'll have to SLOWER, then turn, then FASTER to avoid it, and if he's distance 1 away, even better because he will blow up on the mine unless he anticipates and plays SLOWER, which is still good because then he has to turn and accelerate around the mine.
 
 The points for FIRE and MINE are added to the evaluation of the resultant positon and also multiplied by the pow(0.75,depth) "patience" factor.
 
@@ -89,9 +89,9 @@ The enemy's shots are not reassigned, he fires according to the heuristic in my 
 * Suicide to regroup the rum in one boat didn't seem like it would be the meta game. It's not obvious that 1 boat with 40 rum is better than 2 boats with 20 rum. I might well sink you with my two boats.
 * I didn't come up with anything clever when it comes to barrels, I didn't try to be the last one to pick up a barrel or anything like that which I saw other AIs do. Maybe I missed something here.
 
-#Conclusion
+# Conclusion
 
-I tried to focus on the most simple/effective ideas as I think the lines of code show.
+I tried to focus on the most simple/effective ideas as I think the lines of code show. I have big doubts about my search algorithm though. I wonder if I missed something ovious in that regard or if the only way to go is minimax.
 
 I'm disappointed to have finished second after being first during so much of the competition, waking up to a bot I never really had a chance to try to beat. But that's how contests are, you stop at some arbitrary time and whoever is first then wins. ReCurse somehow managed to piece together a minimax for this game which is really cool. I didn't think it could be done until I saw it. I guess he had the vision.
 
