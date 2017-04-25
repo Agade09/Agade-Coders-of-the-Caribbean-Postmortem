@@ -52,7 +52,7 @@ I favor being towards the center and facing the center because it means having m
 
 I didn't try to make my ships run away when I had more rum, I suspected it would make my ships back themselves into corners and that the meta would be to "stand and fight".
 
-In the bruteforce the position is evaluated after each move and the final score is `Eval(first position)*pow(0.75,0)+Eval(second position)*pow(0.75,1)+...`
+In the bruteforce the position is evaluated after each move and the final score is `Eval(first position)*pow(0.75,0)+Eval(second position)*pow(0.75,1)+...`. It is important to value immediate, more certain gain than the uncertain future.
 
 ### Search
 
