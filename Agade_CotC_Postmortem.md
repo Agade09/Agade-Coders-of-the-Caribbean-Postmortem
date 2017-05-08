@@ -54,7 +54,7 @@ I favor being towards the center and facing the center because it means having m
 
 I didn't try to make my ships run away when I had more rum, I suspected it would make my ships back themselves into corners and that the meta would be to "stand and fight".
 
-In the bruteforce the position is evaluated after each move and the final score is `Eval(first position)*pow(0.75,0)+Eval(second position)*pow(0.75,1)+...`. It is important to value immediate, more certain gain than the uncertain future.
+In the bruteforce the position is evaluated after each move and the final score is `Eval(first position)*pow(0.75,0)+Eval(second position)*pow(0.75,1)+...`. It is important to value immediate, more certain gain, more than uncertain future gain.
 
 ### Search
 
@@ -72,8 +72,8 @@ The points for FIRE and MINE are added to the evaluation of the resultant posito
 
 ## Shooting
 
-After I have bruteforced the enemy's moves along with my moves, if I'm supposed to FIRE this turn, I try to pick a better target than the one found by the heuristic. To do this I disable my cannonballs in the bruteforce so that the enemy doesn't dodge cannonballs I will never fire (I will change the target). I then use my prediction of the enemy's position to intercept the center of his boat as early as possible with two exceptions:
-* If I can intercept the position where he was the turn before and still hit him when the cannonball lands then that is a better shot because it is harder to dodge. One example of this is close range shooting in front of a stationary boat because I anticipate its movements, the boat can then dodge that shot by not moving at all, better to shoot at it and still hit it in the tail when it moves.
+After I have bruteforced the enemy's moves along with my moves, if I'm supposed to FIRE this turn, I try to pick a better target than the one found by the heuristic. To do this, in the bruteforce my cannonballs are ignored so that the enemy doesn't dodge those cannonballs whose targets will change. I then use my prediction of the enemy's position to intercept the center of his boat as early as possible with two exceptions:
+* If I can intercept the position where he was the turn before and still hit him on any part of the boat when the cannonball lands then that is a better shot because it is harder to dodge. One example of this is close range shooting in front of a stationary boat because I anticipate its movements, the boat can then dodge that shot by not moving at all. It is better to shoot at it and still hit it in the tail when it moves.
 * If I predict that the enemy will pass by my mine spot within 2 turns place a mine instead of shooting. This rarely happened but it was possible to, for example, mine a boat in the back if it turned into my boat.
 
 The way I saw it, shooting at my enemy's predicted position was a way of denying him his best move, which for example in the early game often involved blowing up his barrels and delaying him.
