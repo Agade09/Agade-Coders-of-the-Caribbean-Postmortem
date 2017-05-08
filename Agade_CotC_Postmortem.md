@@ -72,7 +72,7 @@ The points for FIRE and MINE are added to the evaluation of the resultant posito
 
 ## Shooting
 
-After I have bruteforced the enemy's moves along with my moves, if I'm supposed to FIRE this turn, I try to pick a better target than the one found by the heuristic. To do this, in the bruteforce my cannonballs are ignored so that the enemy doesn't dodge those cannonballs whose targets will change. I then use my prediction of the enemy's position to intercept the center of his boat as early as possible with two exceptions:
+After I have bruteforced the enemy's moves along with my moves, if I'm supposed to FIRE this turn, I try to pick a better target than the one found by the heuristic. To do this, in the bruteforce my cannonballs are ignored so that the enemy doesn't dodge said cannonballs because their target will change. I then use my prediction of the enemy's position to intercept the center of his boat as early as possible with two exceptions:
 * If I can intercept the position where he was the turn before and still hit him on any part of the boat when the cannonball lands then that is a better shot because it is harder to dodge. One example of this is close range shooting in front of a stationary boat because I anticipate its movements, the boat can then dodge that shot by not moving at all. It is better to shoot at it and still hit it in the tail when it moves.
 * If I predict that the enemy will pass by my mine spot within 2 turns place a mine instead of shooting. This rarely happened but it was possible to, for example, mine a boat in the back if it turned into my boat.
 
