@@ -1,4 +1,4 @@
-﻿# Agade Coders of the Carribbean Postmortem
+﻿# Agade Coders of the Caribbean Postmortem
 
 I will try to describe my AI which finished second in the CotC contest.
 
